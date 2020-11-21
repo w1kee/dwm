@@ -20,7 +20,7 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = { "dev", "www", "term", "chat", "work", "game", "misc", "dir", "bg" };
+static const char *tags[] = { "", "爵", "", "", "", "", "﫢", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -29,7 +29,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     iscentered   isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            0,           1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           0,           -1 },
+	{ "firefox",  NULL,       NULL,       1 << 1,       0,           0,           -1 },
 };
 
 /* layout(s) */
