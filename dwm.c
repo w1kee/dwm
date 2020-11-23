@@ -506,6 +506,7 @@ buttonpress(XEvent *e)
 				}
 			}
 		} else
+                    click = ClkWinTitle;
 	} else if ((c = wintoclient(ev->window))) {
 		focus(c);
 		restack(selmon);
