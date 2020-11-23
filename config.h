@@ -81,6 +81,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "st", NULL };
 static const char *tmuxcmd[]  = { "st", "-c", "stfloat", "-e", "/home/w1ke/.local/bin/stfloattmux", NULL };
 static const char *rcmd[]     = { "st", "-c", "stfloat", "-e", "R", "-q", "--no-save", NULL };
+static const char *plsmxcmd[] = { "st", "-c", "stfloat", "-e", "pulsemixer", NULL };
 
 #include "shiftview.c"
 static Key keys[] = {
@@ -89,6 +90,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = tmuxcmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = rcmd } },
+        { MODKEY,                       XK_a,      spawn,          {.v = plsmxcmd} },
 	{ MODKEY|ShiftMask,             XK_f,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
