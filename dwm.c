@@ -2262,7 +2262,7 @@ updatestatus(void)
 		strcpy(stext, "dwm-"VERSION);
 	else
 		copyvalidchars(stext, rawstext);
-	drawbar(selmon);
+        drawbar(selmon);
 }
 
 void
