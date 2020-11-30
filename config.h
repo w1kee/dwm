@@ -108,6 +108,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_u,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_y,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_o,      setmfact,       {.f = +0.05} },
+        { MODKEY,                       XK_h,      shiftview,      { .i = -1 } },
+        { MODKEY,                       XK_l,      shiftview,      { .i = 1 } },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },

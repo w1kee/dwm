@@ -237,7 +237,6 @@ static void setlayout(const Arg *arg);
 static void setmfact(const Arg *arg);
 static void setup(void);
 static void seturgent(Client *c, int urg);
-static void shiftview(int i);
 static void showhide(Client *c);
 static void sigchld(int unused);
 static void sigdwmblocks(const Arg *arg);
