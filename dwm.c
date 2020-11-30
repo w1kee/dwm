@@ -1435,21 +1435,6 @@ resize(Client *c, int x, int y, int w, int h, int interact)
 }
 
 void
-shiftview(const Arg *arg) {
-	Arg shifted;
-
-	if(arg->i > 0) // left circular shift
-		shifted.ui = (selmon->tagset[selmon->seltags] << arg->i)
-		   | (selmon->tagset[selmon->seltags] >> (LENGTH(tags) - arg->i));
-
-	else // right circular shift
-		shifted.ui = selmon->tagset[selmon->seltags] >> (- arg->i)
-		   | selmon->tagset[selmon->seltags] << (LENGTH(tags) + arg->i);
-
-	view(&shifted);
-}
-
-void
 resizeclient(Client *c, int x, int y, int w, int h)
 {
 	XWindowChanges wc;
