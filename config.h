@@ -93,12 +93,14 @@ static const char *rcmd[]     = { "st", "-c", "stfloat", "-e", "R", "-q", "--no-
 static const char *plsmxcmd[] = { "st", "-c", "stfloat", "-e", "pulsemixer", NULL };
 static const char *qtbrwcmd[] = { "qutebrowser", NULL };
 static const char *firfxcmd[] = { "firefox", NULL };
+static const char *slckcmd[]  = { "slock", NULL };
 
 #include "shiftview.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
         STACKKEYS(MODKEY,                          focus)
         STACKKEYS(MODKEY|ShiftMask,                push)
+        { MODKEY|ControlMask,           XK_l,      spawn,          {.v = slckcmd } },
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = tmuxcmd } },
